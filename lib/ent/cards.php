@@ -72,11 +72,13 @@
 
         distribute_cards();
 
-        print "\nNew game initialized";
+        print "\nNew game initialized\n";
         
         drop_duplicate_cards();
         
         init_game_status();
+
+        show_next_player();
     }
 
     function distribute_cards()
