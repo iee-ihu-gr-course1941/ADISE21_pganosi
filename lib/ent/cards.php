@@ -23,6 +23,7 @@
             JSON_PRETTY_PRINT);
 
         //if select count < 41 game is active
+        check_for_winner();
     }
 
     function drop_duplicate_cards()
@@ -39,6 +40,7 @@
         $stmt->execute();
         $result = $stmt->get_result();
 
+        check_for_winner();
     }
 
     function swap_card()
@@ -49,7 +51,10 @@
 
     function check_for_winner()
     {
-
+        global $mysqli;
+        $result=mysqli_query($mysqli, "SELECT count(*) as total from current_cards");
+        $data=mysqli_fetch_assoc($result);
+        if($data['total'] <= 1) print("\nWINNER\n");
     }
 
     function init_game()
