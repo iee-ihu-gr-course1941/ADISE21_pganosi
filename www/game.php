@@ -1,5 +1,6 @@
 <?php
 
+    require_once "../lib/db/dbconnect.php";
     require_once "../lib/ent/cards.php";
     require_once "../lib/ent/status.php";
 
