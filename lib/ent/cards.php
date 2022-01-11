@@ -49,6 +49,7 @@
     {
         //code for swapping cards
         drop_duplicate_cards();
+        
     }
 
     function check_for_winner()

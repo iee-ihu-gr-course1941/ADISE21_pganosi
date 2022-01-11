@@ -63,6 +63,7 @@ CREATE TABLE `current_cards` (
 
 LOCK TABLES `current_cards` WRITE;
 /*!40000 ALTER TABLE `current_cards` DISABLE KEYS */;
+INSERT INTO `current_cards` VALUES (31,'ace','spades','player2'),(32,'two','spades','player1'),(33,'three','spades','player1'),(34,'four','spades','player1'),(35,'five','spades','player1'),(36,'six','spades','player1'),(37,'seven','spades','player1'),(38,'eight','spades','player2'),(39,'nine','spades','player2'),(40,'ten','spades','player1'),(41,'king','clubs','player2');
 /*!40000 ALTER TABLE `current_cards` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -87,6 +88,7 @@ CREATE TABLE `game_status` (
 
 LOCK TABLES `game_status` WRITE;
 /*!40000 ALTER TABLE `game_status` DISABLE KEYS */;
+INSERT INTO `game_status` VALUES ('started','player1','draw','2022-01-11 21:06:11'),('started','player1','draw','2022-01-11 21:06:19'),('started','player2','draw','2022-01-11 21:06:20'),('started','player2','draw','2022-01-11 21:11:00'),('started','player1','draw','2022-01-11 21:40:12'),('started','player1','draw','2022-01-11 21:42:09'),('started','player1','draw','2022-01-11 21:43:30'),('started','player1','draw','2022-01-11 21:43:49'),('started','player2','draw','2022-01-11 21:44:04');
 /*!40000 ALTER TABLE `game_status` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -128,4 +130,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-11 20:22:58
+-- Dump completed on 2022-01-11 23:57:41
