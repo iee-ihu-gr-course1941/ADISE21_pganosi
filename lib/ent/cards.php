@@ -1,4 +1,6 @@
 <?php
+    require_once "../lib/ent/status.php";
+
     function hande_cards($method)
     {
         header("Content-Type: text/plain");
@@ -74,6 +76,7 @@
         
         drop_duplicate_cards();
         
+        init_game_status();
     }
 
     function distribute_cards()
