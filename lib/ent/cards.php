@@ -27,6 +27,17 @@
 
     function drop_duplicate_cards()
     {
+        $sql = "DELETE t1 FROM current_cards t1
+        INNER JOIN current_cards t2 
+        WHERE 
+            t1.id < t2.id AND 
+            t1.name = t2.name;";
+        
+        global $mysqli;
+        $stmt = $mysqli->prepare($sql);
+
+        $stmt->execute();
+        $result = $stmt->get_result();
 
     }
 
@@ -55,8 +66,9 @@
         distribute_cards();
 
         print "\nNew game initialized";
-        //drop_duplicate_cards();
-        //rest of code
+        
+        drop_duplicate_cards();
+        
     }
 
     function distribute_cards()
