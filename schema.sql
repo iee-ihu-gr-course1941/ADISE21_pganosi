@@ -52,8 +52,7 @@ CREATE TABLE `current_cards` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `cardgroup` varchar(255) NOT NULL,
-  `holder` enum('player1','player2','NULL') DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `holder` enum('player1','player2','NULL') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -63,7 +62,7 @@ CREATE TABLE `current_cards` (
 
 LOCK TABLES `current_cards` WRITE;
 /*!40000 ALTER TABLE `current_cards` DISABLE KEYS */;
-INSERT INTO `current_cards` VALUES (31,'ace','spades','player2'),(32,'two','spades','player1'),(33,'three','spades','player1'),(34,'four','spades','player1'),(35,'five','spades','player1'),(36,'six','spades','player1'),(37,'seven','spades','player1'),(38,'eight','spades','player2'),(39,'nine','spades','player2'),(40,'ten','spades','player1'),(41,'king','clubs','player2');
+INSERT INTO `current_cards` VALUES (1,'ace','spades','player1'),(2,'two','spades','player1'),(3,'three','spades','player1'),(4,'seven','spades','player1'),(1,'ten','spades','player2'),(2,'king','clubs','player2'),(3,'nine','spades','player2'),(4,'four','spades','player2'),(5,'five','spades','player2'),(6,'six','spades','player2'),(7,'eight','spades','player2');
 /*!40000 ALTER TABLE `current_cards` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -88,7 +87,7 @@ CREATE TABLE `game_status` (
 
 LOCK TABLES `game_status` WRITE;
 /*!40000 ALTER TABLE `game_status` DISABLE KEYS */;
-INSERT INTO `game_status` VALUES ('started','player1','draw','2022-01-11 21:06:11'),('started','player1','draw','2022-01-11 21:06:19'),('started','player2','draw','2022-01-11 21:06:20'),('started','player2','draw','2022-01-11 21:11:00'),('started','player1','draw','2022-01-11 21:40:12'),('started','player1','draw','2022-01-11 21:42:09'),('started','player1','draw','2022-01-11 21:43:30'),('started','player1','draw','2022-01-11 21:43:49'),('started','player2','draw','2022-01-11 21:44:04');
+INSERT INTO `game_status` VALUES ('started','player1','draw','2022-01-11 21:06:11'),('started','player1','draw','2022-01-11 21:06:19'),('started','player2','draw','2022-01-11 21:06:20'),('started','player2','draw','2022-01-11 21:11:00'),('started','player1','draw','2022-01-11 21:40:12'),('started','player1','draw','2022-01-11 21:42:09'),('started','player1','draw','2022-01-11 21:43:30'),('started','player1','draw','2022-01-11 21:43:49'),('started','player2','draw','2022-01-11 21:44:04'),('started','player2','draw','2022-01-12 18:00:21'),('started','player2','draw','2022-01-12 18:53:54');
 /*!40000 ALTER TABLE `game_status` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -113,7 +112,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'voula','abc',0),(2,'ganosi','abc',0);
+INSERT INTO `users` VALUES (1,'voula','abc',1),(2,'ganosi','abc',1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -130,4 +129,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-11 23:57:41
+-- Dump completed on 2022-01-12 21:19:03

@@ -70,7 +70,7 @@
     function update_game_status()
     {
         $current_player = show_next_player();
-        print($current_player);
+        //print($current_player);
         if($current_player == 'player2') $next_player = 'player1';
         else $next_player = 'player2';
         print("\nCurrent player :" . " $current_player");
@@ -78,7 +78,7 @@
 
         global $mysqli;
 
-        $sql = "insert into game_status values('started', $next_player, 'draw', now())";
+        $sql = "insert into game_status values('started', '$next_player', 'draw', now())";
         $stmt = $mysqli->prepare($sql);
 
         $stmt->execute();
