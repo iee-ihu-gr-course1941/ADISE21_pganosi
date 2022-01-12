@@ -1,11 +1,12 @@
 <?php
     require_once "../lib/ent/status.php";
+    require_once "../lib/ent/users.php";
 
     function hande_cards($method)
     {
         header("Content-Type: text/plain");
         print $method;
-        print "\nprinted from cards.php";
+        //print "\nprinted from cards.php";
         if($method=='GET') fetch_cards();
         else if($method=='POST') init_game();
     }
@@ -62,24 +63,30 @@
 
     function init_game()
     {
-        $sql = 'SET SQL_SAFE_UPDATES = 0';
-        execute_query($sql);
+        if(!is_logged_in())
+        { 
+            print "\nPlease log in in order to play";
+            return false;
+        }
 
-        $sql = 'DELETE FROM current_cards';
-        execute_query($sql);
+        // $sql = 'SET SQL_SAFE_UPDATES = 0';
+        // execute_query($sql);
 
-        $sql = 'INSERT INTO current_cards SELECT * FROM CARDS';
-        execute_query($sql);
+        // $sql = 'DELETE FROM current_cards';
+        // execute_query($sql);
 
-        distribute_cards();
+        // $sql = 'INSERT INTO current_cards SELECT * FROM CARDS';
+        // execute_query($sql);
 
-        print "\nNew game initialized\n";
+        // distribute_cards();
+
+        // print "\nNew game initialized\n";
         
-        drop_duplicate_cards();
+        // drop_duplicate_cards();
         
-        init_game_status();
+        // init_game_status();
 
-        show_next_player();
+        // show_next_player();
     }
 
     function distribute_cards()

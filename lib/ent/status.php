@@ -1,25 +1,25 @@
 <?php
     header("Content-Type: text/plain");
-    print $method;
+    // print $method;
     print "\nprinted from cards.php";
 
     function show_status()
     {
 
-        update_game_status();
-        // global $mysqli;
+        // update_game_status();
+        global $mysqli;
 
-        // $sql = 'select * from game_status';
-        // $stmt = $mysqli->prepare($sql);
+        $sql = 'select * from game_status';
+        $stmt = $mysqli->prepare($sql);
 
-        // $stmt->execute();
-        // $result = $stmt->get_result();
+        $stmt->execute();
+        $result = $stmt->get_result();
 
-        // header('Content-type: application/json');
-        // $json = json_encode($result->fetch_all(MYSQLI_ASSOC),
-        //     JSON_PRETTY_PRINT);
+        header('Content-type: application/json');
+        $json = json_encode($result->fetch_all(MYSQLI_ASSOC),
+            JSON_PRETTY_PRINT);
         
-        // print $json;
+        print $json;
         
     }
 
