@@ -241,7 +241,6 @@
         header('Content-type: application/json');
         $json = json_encode($result->fetch_all(MYSQLI_ASSOC),
             JSON_PRETTY_PRINT);
-        
         print $json;
     }
 ?>

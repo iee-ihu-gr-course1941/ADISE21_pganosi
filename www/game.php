@@ -20,8 +20,11 @@
         case 'cards' : hande_cards($method);
             break;
         case 'swap_card' : swap_card($method, $request[0]);
+            break;
         case 'users' : handle_user($method, $request[0]);
+            break;
         case 'my_cards': show_my_cards();
+            break;
         // case 'users' : handle_user($method, $request[0], $request[1], $input);
         default : header("HTTP/1.1 404 Not Found");
         exit;
