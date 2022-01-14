@@ -245,6 +245,9 @@
         $json = json_encode($result->fetch_all(MYSQLI_ASSOC),
             JSON_PRETTY_PRINT);
         print $json;
+        header('Content-Type: application/json; charset=utf-8');
+        echo json_encode($json);
+
     }
 
     function find_if_game_was_aborted()
