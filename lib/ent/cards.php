@@ -64,13 +64,12 @@
         $stmt->execute();
         $result = $stmt->get_result();
 
-        //check_for_winner();
     }
 
     function swap_card($method, $card_id)
     {
         if($method=='GET') return false;
-        //code for swapping cards
+
         arrange_cards();
         $active_player = show_next_player();
         if($active_player == 'player1') $opponent = 'player2';
@@ -82,11 +81,13 @@
 
         execute_query($sql);
         print("\nCard swapped\n");
-        //drop_duplicate_cards();
+
         duplicates();
         print("\nDupplicates dropped\n");
+
         if(!check_for_winner()) print("\nNo winner, game continuing...\n");
         else return;
+
         update_game_status();
     }
 
@@ -127,7 +128,7 @@
         
         init_game_status();
 
-        show_next_player();
+        show_first_player();
     }
 
     function distribute_cards()

@@ -62,8 +62,13 @@
         $result = $stmt->get_result();
 
         $row = $result -> fetch_array(MYSQLI_ASSOC);
-        printf ("Next Player: %s\n", $row["p_turn"]);
+        // printf ("Next Player: %s\n", $row["p_turn"]);
         return $row["p_turn"];
+    }
+
+    function show_first_player()
+    {
+        printf("First Player: %s\n", show_next_player());
     }
 
     function update_game_status()
