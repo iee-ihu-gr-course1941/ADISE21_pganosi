@@ -1,7 +1,8 @@
 <?php
     require_once "../lib/ent/status.php";
     require_once "../lib/ent/users.php";
-
+    ini_set('display_errors', 1);
+    
     function hande_cards($method)
     {
         header("Content-Type: text/plain");
