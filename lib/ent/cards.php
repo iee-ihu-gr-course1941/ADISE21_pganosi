@@ -74,7 +74,6 @@
         }
         if($method=='GET') return false;
 
-        //if() game is aborted update to active -> print game was aborted, continuing game
         find_if_game_was_aborted();
 
         arrange_cards();
@@ -106,6 +105,7 @@
         $data=mysqli_fetch_assoc($result);
         if($data['total'] <= 1){
             print("\nPLAYER $current_player IS WINNER\n");
+            update_winner($current_player);
             return true;
         }
     }
@@ -262,6 +262,7 @@
         $status = $row["status"];
         if($status=="aborted")
         {
+            print("\nResuming aborted game\n");
             $sql = "SET SQL_SAFE_UPDATES = 0";
             execute_query($sql);
 
@@ -271,5 +272,14 @@
             )";
             execute_query($sql);
         }
+    }
+
+    function update_winner($current_player)
+    {
+        $sql = "insert into game_status values('ended', '$current_player', '$current_player', now())";
+        $stmt = $mysqli->prepare($sql);
+
+        $stmt->execute();
+        $result = $stmt->get_result();
     }
 ?>
