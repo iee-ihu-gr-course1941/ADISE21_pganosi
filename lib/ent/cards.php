@@ -5,10 +5,10 @@
     function hande_cards($method)
     {
         header("Content-Type: text/plain");
-        print $method;
-        //print "\nprinted from cards.php";
+        // print $method;
+        
         if($method=='GET') fetch_cards();
-        else if($method=='POST') init_game();
+        else if($method=='POST') init_game();//duplicates();//init_game();
     }
 
     function fetch_cards()
@@ -35,7 +35,7 @@
         $sql = "DELETE t1 FROM current_cards t1
         INNER JOIN current_cards t2 
         WHERE 
-            --t1.id < t2.id AND 
+            t1.id < t2.id AND 
             t1.name = t2.name AND
             t1.holder = 'player1' 
             AND
@@ -51,7 +51,7 @@
         $sql = "DELETE t1 FROM current_cards t1
         INNER JOIN current_cards t2 
         WHERE 
-            --t1.id < t2.id AND 
+            t1.id < t2.id AND 
             t1.name = t2.name AND
             t1.holder = 'player2' 
             AND
@@ -64,7 +64,7 @@
         $stmt->execute();
         $result = $stmt->get_result();
 
-        check_for_winner();
+        //check_for_winner();
     }
 
     function swap_card($method, $card_id)
@@ -82,7 +82,8 @@
 
         execute_query($sql);
         print("\nCard swapped\n");
-        drop_duplicate_cards();
+        //drop_duplicate_cards();
+        duplicates();
         print("\nDupplicates dropped\n");
         if(!check_for_winner()) print("\nNo winner, game continuing...\n");
         else return;
@@ -92,10 +93,11 @@
     function check_for_winner()
     {
         global $mysqli;
+        $current_player = show_next_player();
         $result=mysqli_query($mysqli, "SELECT count(*) as total from current_cards");
         $data=mysqli_fetch_assoc($result);
         if($data['total'] <= 1){
-            print("\nWINNER\n");
+            print("\nPLAYER $current_player IS WINNER\n");
             return true;
         }
     }
@@ -121,7 +123,7 @@
 
         print "\nNew game initialized\n";
         
-        drop_duplicate_cards();
+        duplicates();
         
         init_game_status();
 
@@ -169,5 +171,54 @@
         $sql = "UPDATE IGNORE current_cards SET id = (SELECT @code:=@code+1 AS code)
         where holder='player2'";
         execute_query($sql);
+    }
+
+    function duplicates()
+    {
+        global $mysqli;
+        $cards = array();
+        $players = array("player1", "player2");
+
+        $result=mysqli_query($mysqli, "SELECT DISTINCT name FROM cards WHERE name!='king'");
+        while(($row =  mysqli_fetch_array($result))) $cards[] = $row['name'];
+
+        foreach($players as $player)
+        {
+            foreach ($cards as $cardName) 
+            {
+                update_even_card_holders($player, $cardName);
+            }
+        }
+        
+        delete_null_holders();
+
+        drop_duplicate_cards();
+
+    }
+
+    function update_even_card_holders($player, $cardName)
+    {
+        $query = "update current_cards set holder = null
+            where  exists ( select * from (select * from current_cards) as tbl
+            where holder='$player' and name='$cardName'
+            having count(*) = 4 || count(*) = 2
+            )
+            and holder='$player' and name='$cardName'";
+
+            execute_query($query);
+    }
+
+    function delete_null_holders()
+    {
+        $bigQuery = "SET SQL_SAFE_UPDATES = 0;
+        DELETE FROM current_cards WHERE holder is NULL;";
+        global $mysqli;
+        $mysqli->multi_query($bigQuery);
+        do {
+            if ($result = $mysqli->store_result()) {
+                var_dump($result->fetch_all(MYSQLI_ASSOC));
+                $result->free();
+            }
+        } while ($mysqli->next_result());
     }
 ?>

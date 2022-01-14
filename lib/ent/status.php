@@ -1,7 +1,6 @@
 <?php
     header("Content-Type: text/plain");
-    // print $method;
-    print "\nprinted from cards.php";
+
 
     function show_status()
     {
@@ -69,6 +68,7 @@
 
     function update_game_status()
     {
+        global $current_player;
         $current_player = show_next_player();
         //print($current_player);
         if($current_player == 'player2') $next_player = 'player1';

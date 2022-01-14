@@ -10,9 +10,9 @@
     $input = json_decode(file_get_contents('php://input'), true);
 
     header("Content-Type: text/plain");
-    print "method=$method\n";
-    print "Path_info=".$_SERVER['PATH_INFO']."\n";
-    print_r ($request);
+    // print "method=$method\n";
+    // print "Path_info=".$_SERVER['PATH_INFO']."\n";
+    // print_r ($request);
 
     switch($r = array_shift($request)) {
         case 'status' : show_status();
