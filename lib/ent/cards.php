@@ -2,7 +2,7 @@
     require_once "../lib/ent/status.php";
     require_once "../lib/ent/users.php";
     ini_set('display_errors', 1);
-    
+
     function hande_cards($method)
     {
         header("Content-Type: text/plain");
@@ -245,9 +245,10 @@
         header('Content-type: application/json');
         $json = json_encode($result->fetch_all(MYSQLI_ASSOC),
             JSON_PRETTY_PRINT);
+        
         print $json;
-        header('Content-Type: application/json; charset=utf-8');
-        echo json_encode($json);
+        // header('Content-Type: application/json; charset=utf-8');
+        // echo json_encode($json);
 
     }
 
