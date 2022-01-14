@@ -276,10 +276,9 @@
 
     function update_winner($current_player)
     {
+        global $mysqli;
         $sql = "insert into game_status values('ended', '$current_player', '$current_player', now())";
         $stmt = $mysqli->prepare($sql);
-
         $stmt->execute();
-        $result = $stmt->get_result();
     }
 ?>
