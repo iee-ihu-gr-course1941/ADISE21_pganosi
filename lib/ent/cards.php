@@ -122,6 +122,9 @@
         $sql = 'SET SQL_SAFE_UPDATES = 0';
         execute_query($sql);
 
+        $sql = "use adise";
+        execute_query($sql);
+        
         $sql = 'DELETE FROM current_cards';
         execute_query($sql);
 
