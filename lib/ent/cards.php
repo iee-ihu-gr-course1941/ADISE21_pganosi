@@ -242,7 +242,7 @@
         $stmt->execute();
         $result = $stmt->get_result();
 
-        header('Content-type: application/json');
+        header('Content-type: application/json; charset=utf-8');
         $json = json_encode($result->fetch_all(MYSQLI_ASSOC),
             JSON_PRETTY_PRINT);
         
