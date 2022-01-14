@@ -74,6 +74,9 @@
         }
         if($method=='GET') return false;
 
+        //if() game is aborted update to active -> print game was aborted, continuing game
+        find_if_game_was_aborted();
+
         arrange_cards();
         $active_player = show_next_player();
         if($active_player == 'player1') $opponent = 'player2';
@@ -242,5 +245,31 @@
         $json = json_encode($result->fetch_all(MYSQLI_ASSOC),
             JSON_PRETTY_PRINT);
         print $json;
+    }
+
+    function find_if_game_was_aborted()
+    {
+        global $mysqli;
+
+        $sql = 'select * from game_status order by last_change desc limit 1';
+        $stmt = $mysqli->prepare($sql);
+
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        $row = $result -> fetch_array(MYSQLI_ASSOC);
+        
+        $status = $row["status"];
+        if($status=="aborted")
+        {
+            $sql = "SET SQL_SAFE_UPDATES = 0";
+            execute_query($sql);
+
+            $sql = "update game_status set status='started' where
+            status = 'aborted' and last_change = (
+            select last_change from (select * from game_status) as tbl order by last_change desc limit 1
+            )";
+            execute_query($sql);
+        }
     }
 ?>

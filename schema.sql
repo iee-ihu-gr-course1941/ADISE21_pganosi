@@ -62,7 +62,7 @@ CREATE TABLE `current_cards` (
 
 LOCK TABLES `current_cards` WRITE;
 /*!40000 ALTER TABLE `current_cards` DISABLE KEYS */;
-INSERT INTO `current_cards` VALUES (1,'three','hearts','player2'),(2,'four','hearts','player2'),(3,'nine','hearts','player2'),(2,'three','spades','player1'),(3,'four','spades','player1'),(4,'nine','spades','player1'),(5,'king','clubs','player2');
+INSERT INTO `current_cards` VALUES (11,'ace','diamonds','player2'),(12,'two','diamonds','player2'),(17,'seven','diamonds','player2'),(28,'eight','hearts','player2'),(29,'nine','hearts','player1'),(31,'ace','spades','player1'),(32,'two','spades','player1'),(37,'seven','spades','player1'),(38,'eight','spades','player1'),(39,'nine','spades','player2'),(41,'king','clubs','player1');
 /*!40000 ALTER TABLE `current_cards` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -87,7 +87,7 @@ CREATE TABLE `game_status` (
 
 LOCK TABLES `game_status` WRITE;
 /*!40000 ALTER TABLE `game_status` DISABLE KEYS */;
-INSERT INTO `game_status` VALUES ('aborted','player1','draw','2022-01-11 21:06:11'),('started','player1','draw','2022-01-11 21:06:19'),('started','player2','draw','2022-01-11 21:06:20'),('started','player2','draw','2022-01-11 21:11:00'),('started','player1','draw','2022-01-11 21:40:12'),('started','player1','draw','2022-01-11 21:42:09'),('started','player1','draw','2022-01-11 21:43:30'),('started','player1','draw','2022-01-11 21:43:49'),('started','player2','draw','2022-01-11 21:44:04'),('started','player2','draw','2022-01-12 18:00:21'),('started','player2','draw','2022-01-12 18:53:54'),('started','player2','draw','2022-01-12 19:37:13'),('started','player1','draw','2022-01-12 19:39:09'),('started','player2','draw','2022-01-12 19:46:03'),('started','player1','draw','2022-01-12 19:46:12'),('started','player2','draw','2022-01-12 19:46:27'),('started','player1','draw','2022-01-12 19:46:29'),('started','player2','draw','2022-01-12 19:46:32'),('started','player1','draw','2022-01-12 19:46:34'),('started','player2','draw','2022-01-12 19:46:46'),('started','player1','draw','2022-01-12 19:47:00'),('started','player2','draw','2022-01-12 19:47:03'),('started','player1','draw','2022-01-12 19:47:08'),('started','player2','draw','2022-01-12 19:47:10'),('started','player1','draw','2022-01-12 19:47:12'),('started','player2','draw','2022-01-12 19:47:15'),('started','player1','draw','2022-01-12 19:47:17'),('started','player2','draw','2022-01-12 19:47:19'),('started','player2','draw','2022-01-12 19:47:53'),('started','player1','draw','2022-01-12 19:48:52'),('started','player2','draw','2022-01-12 19:49:17'),('started','player1','draw','2022-01-12 19:52:16'),('started','player2','draw','2022-01-12 19:52:19'),('started','player1','draw','2022-01-12 19:52:22'),('started','player2','draw','2022-01-12 19:52:25'),('started','player2','draw','2022-01-12 19:55:45'),('started','player1','draw','2022-01-12 19:56:15'),('started','player2','draw','2022-01-12 19:57:56'),('started','player1','draw','2022-01-12 19:58:39'),('started','player2','draw','2022-01-12 19:58:42'),('started','player1','draw','2022-01-12 19:59:44'),('started','player1','draw','2022-01-12 20:03:58'),('started','player1','draw','2022-01-12 20:06:07'),('started','player2','draw','2022-01-12 20:06:41'),('started','player1','draw','2022-01-12 20:06:55'),('started','player1','draw','2022-01-12 20:09:30'),('started','player2','draw','2022-01-12 20:09:46'),('started','player1','draw','2022-01-12 20:10:31'),('started','player2','draw','2022-01-12 20:11:13'),('started','player1','draw','2022-01-12 20:12:45'),('started','player2','draw','2022-01-12 20:14:52'),('started','player1','draw','2022-01-12 20:15:44'),('started','player1','draw','2022-01-12 20:24:16'),('started','player2','draw','2022-01-12 20:24:30'),('started','player1','draw','2022-01-12 20:24:42'),('started','player2','draw','2022-01-12 20:25:47'),('started','player1','draw','2022-01-12 20:28:50'),('started','player1','draw','2022-01-12 20:34:42'),('started','player1','draw','2022-01-12 20:55:42'),('started','player2','draw','2022-01-12 20:55:44'),('started','player1','draw','2022-01-12 20:57:59'),('started','player1','draw','2022-01-12 20:58:31'),('started','player2','draw','2022-01-12 20:59:19'),('started','player2','draw','2022-01-14 10:15:35'),('started','player1','draw','2022-01-14 10:16:57'),('started','player2','draw','2022-01-14 10:17:47'),('started','player2','draw','2022-01-14 10:18:04'),('started','player1','draw','2022-01-14 10:18:47'),('started','player1','draw','2022-01-14 10:19:35'),('started','player2','draw','2022-01-14 10:19:38'),('started','player1','draw','2022-01-14 10:21:45'),('started','player1','draw','2022-01-14 10:23:23'),('started','player1','draw','2022-01-14 10:38:28'),('started','player1','draw','2022-01-14 10:43:15'),('started','player1','draw','2022-01-14 10:48:59'),('started','player2','draw','2022-01-14 14:11:16'),('started','player1','draw','2022-01-14 14:12:45'),('started','player2','draw','2022-01-14 14:13:07'),('started','player1','draw','2022-01-14 14:13:30'),('started','player2','draw','2022-01-14 14:14:39'),('started','player2','draw','2022-01-14 14:18:27'),('started','player1','draw','2022-01-14 14:19:30'),('started','player2','draw','2022-01-14 14:22:37'),('started','player1','draw','2022-01-14 14:24:39'),('started','player2','draw','2022-01-14 14:30:00'),('started','player1','draw','2022-01-14 14:30:09'),('started','player2','draw','2022-01-14 14:30:13'),('started','player1','draw','2022-01-14 14:30:14'),('started','player2','draw','2022-01-14 14:30:20'),('started','player2','draw','2022-01-14 14:31:11'),('started','player1','draw','2022-01-14 14:31:13'),('started','player2','draw','2022-01-14 14:31:18'),('started','player1','draw','2022-01-14 14:31:24'),('started','player1','draw','2022-01-14 14:34:21'),('started','player2','draw','2022-01-14 14:35:25'),('started','player1','draw','2022-01-14 14:35:28'),('started','player2','draw','2022-01-14 14:35:30'),('started','player1','draw','2022-01-14 14:35:36'),('started','player2','draw','2022-01-14 14:35:39'),('started','player1','draw','2022-01-14 14:39:11'),('started','player2','draw','2022-01-14 14:39:14'),('started','player1','draw','2022-01-14 14:39:17'),('started','player2','draw','2022-01-14 14:39:18'),('started','player2','draw','2022-01-14 14:41:22'),('started','player1','draw','2022-01-14 14:41:46'),('started','player1','draw','2022-01-14 14:42:23'),('started','player1','draw','2022-01-14 14:42:50'),('started','player1','draw','2022-01-14 14:43:29'),('started','player2','draw','2022-01-14 14:43:33'),('started','player1','draw','2022-01-14 14:43:34'),('started','player2','draw','2022-01-14 15:01:59'),('started','player2','draw','2022-01-14 15:04:21'),('started','player1','draw','2022-01-14 15:04:23'),('started','player2','draw','2022-01-14 15:05:04'),('started','player1','draw','2022-01-14 15:05:16'),('started','player2','draw','2022-01-14 15:07:33'),('started','player1','draw','2022-01-14 15:07:59'),('started','player2','draw','2022-01-14 15:08:02'),('started','player2','draw','2022-01-14 15:08:20'),('started','player2','draw','2022-01-14 15:09:32'),('started','player1','draw','2022-01-14 15:09:37'),('started','player2','draw','2022-01-14 15:09:52'),('started','player1','draw','2022-01-14 15:12:47'),('started','player1','draw','2022-01-14 15:13:04'),('started','player2','draw','2022-01-14 15:13:08'),('started','player1','draw','2022-01-14 15:13:20'),('started','player2','draw','2022-01-14 15:13:22'),('started','player1','draw','2022-01-14 15:13:23'),('started','player2','draw','2022-01-14 15:13:24'),('started','player1','draw','2022-01-14 15:22:13'),('started','player2','draw','2022-01-14 15:26:00'),('started','player1','draw','2022-01-14 15:26:05'),('started','player2','draw','2022-01-14 15:26:27'),('started','player1','draw','2022-01-14 15:26:31'),('started','player2','draw','2022-01-14 15:27:36'),('started','player1','draw','2022-01-14 15:27:40'),('started','player2','draw','2022-01-14 15:27:50'),('started','player1','draw','2022-01-14 15:28:09'),('started','player2','draw','2022-01-14 15:30:31'),('started','player2','draw','2022-01-14 15:31:18'),('aborted','player1','draw','2022-01-14 15:31:21');
+INSERT INTO `game_status` VALUES ('aborted','player1','draw','2022-01-11 21:06:11'),('started','player1','draw','2022-01-11 21:06:19'),('started','player2','draw','2022-01-11 21:06:20'),('started','player2','draw','2022-01-11 21:11:00'),('started','player1','draw','2022-01-11 21:40:12'),('started','player1','draw','2022-01-11 21:42:09'),('started','player1','draw','2022-01-11 21:43:30'),('started','player1','draw','2022-01-11 21:43:49'),('started','player2','draw','2022-01-11 21:44:04'),('started','player2','draw','2022-01-12 18:00:21'),('started','player2','draw','2022-01-12 18:53:54'),('started','player2','draw','2022-01-12 19:37:13'),('started','player1','draw','2022-01-12 19:39:09'),('started','player2','draw','2022-01-12 19:46:03'),('started','player1','draw','2022-01-12 19:46:12'),('started','player2','draw','2022-01-12 19:46:27'),('started','player1','draw','2022-01-12 19:46:29'),('started','player2','draw','2022-01-12 19:46:32'),('started','player1','draw','2022-01-12 19:46:34'),('started','player2','draw','2022-01-12 19:46:46'),('started','player1','draw','2022-01-12 19:47:00'),('started','player2','draw','2022-01-12 19:47:03'),('started','player1','draw','2022-01-12 19:47:08'),('started','player2','draw','2022-01-12 19:47:10'),('started','player1','draw','2022-01-12 19:47:12'),('started','player2','draw','2022-01-12 19:47:15'),('started','player1','draw','2022-01-12 19:47:17'),('started','player2','draw','2022-01-12 19:47:19'),('started','player2','draw','2022-01-12 19:47:53'),('started','player1','draw','2022-01-12 19:48:52'),('started','player2','draw','2022-01-12 19:49:17'),('started','player1','draw','2022-01-12 19:52:16'),('started','player2','draw','2022-01-12 19:52:19'),('started','player1','draw','2022-01-12 19:52:22'),('started','player2','draw','2022-01-12 19:52:25'),('started','player2','draw','2022-01-12 19:55:45'),('started','player1','draw','2022-01-12 19:56:15'),('started','player2','draw','2022-01-12 19:57:56'),('started','player1','draw','2022-01-12 19:58:39'),('started','player2','draw','2022-01-12 19:58:42'),('started','player1','draw','2022-01-12 19:59:44'),('started','player1','draw','2022-01-12 20:03:58'),('started','player1','draw','2022-01-12 20:06:07'),('started','player2','draw','2022-01-12 20:06:41'),('started','player1','draw','2022-01-12 20:06:55'),('started','player1','draw','2022-01-12 20:09:30'),('started','player2','draw','2022-01-12 20:09:46'),('started','player1','draw','2022-01-12 20:10:31'),('started','player2','draw','2022-01-12 20:11:13'),('started','player1','draw','2022-01-12 20:12:45'),('started','player2','draw','2022-01-12 20:14:52'),('started','player1','draw','2022-01-12 20:15:44'),('started','player1','draw','2022-01-12 20:24:16'),('started','player2','draw','2022-01-12 20:24:30'),('started','player1','draw','2022-01-12 20:24:42'),('started','player2','draw','2022-01-12 20:25:47'),('started','player1','draw','2022-01-12 20:28:50'),('started','player1','draw','2022-01-12 20:34:42'),('started','player1','draw','2022-01-12 20:55:42'),('started','player2','draw','2022-01-12 20:55:44'),('started','player1','draw','2022-01-12 20:57:59'),('started','player1','draw','2022-01-12 20:58:31'),('started','player2','draw','2022-01-12 20:59:19'),('started','player2','draw','2022-01-14 10:15:35'),('started','player1','draw','2022-01-14 10:16:57'),('started','player2','draw','2022-01-14 10:17:47'),('started','player2','draw','2022-01-14 10:18:04'),('started','player1','draw','2022-01-14 10:18:47'),('started','player1','draw','2022-01-14 10:19:35'),('started','player2','draw','2022-01-14 10:19:38'),('started','player1','draw','2022-01-14 10:21:45'),('started','player1','draw','2022-01-14 10:23:23'),('started','player1','draw','2022-01-14 10:38:28'),('started','player1','draw','2022-01-14 10:43:15'),('started','player1','draw','2022-01-14 10:48:59'),('started','player2','draw','2022-01-14 14:11:16'),('started','player1','draw','2022-01-14 14:12:45'),('started','player2','draw','2022-01-14 14:13:07'),('started','player1','draw','2022-01-14 14:13:30'),('started','player2','draw','2022-01-14 14:14:39'),('started','player2','draw','2022-01-14 14:18:27'),('started','player1','draw','2022-01-14 14:19:30'),('started','player2','draw','2022-01-14 14:22:37'),('started','player1','draw','2022-01-14 14:24:39'),('started','player2','draw','2022-01-14 14:30:00'),('started','player1','draw','2022-01-14 14:30:09'),('started','player2','draw','2022-01-14 14:30:13'),('started','player1','draw','2022-01-14 14:30:14'),('started','player2','draw','2022-01-14 14:30:20'),('started','player2','draw','2022-01-14 14:31:11'),('started','player1','draw','2022-01-14 14:31:13'),('started','player2','draw','2022-01-14 14:31:18'),('started','player1','draw','2022-01-14 14:31:24'),('started','player1','draw','2022-01-14 14:34:21'),('started','player2','draw','2022-01-14 14:35:25'),('started','player1','draw','2022-01-14 14:35:28'),('started','player2','draw','2022-01-14 14:35:30'),('started','player1','draw','2022-01-14 14:35:36'),('started','player2','draw','2022-01-14 14:35:39'),('started','player1','draw','2022-01-14 14:39:11'),('started','player2','draw','2022-01-14 14:39:14'),('started','player1','draw','2022-01-14 14:39:17'),('started','player2','draw','2022-01-14 14:39:18'),('started','player2','draw','2022-01-14 14:41:22'),('started','player1','draw','2022-01-14 14:41:46'),('started','player1','draw','2022-01-14 14:42:23'),('started','player1','draw','2022-01-14 14:42:50'),('started','player1','draw','2022-01-14 14:43:29'),('started','player2','draw','2022-01-14 14:43:33'),('started','player1','draw','2022-01-14 14:43:34'),('started','player2','draw','2022-01-14 15:01:59'),('started','player2','draw','2022-01-14 15:04:21'),('started','player1','draw','2022-01-14 15:04:23'),('started','player2','draw','2022-01-14 15:05:04'),('started','player1','draw','2022-01-14 15:05:16'),('started','player2','draw','2022-01-14 15:07:33'),('started','player1','draw','2022-01-14 15:07:59'),('started','player2','draw','2022-01-14 15:08:02'),('started','player2','draw','2022-01-14 15:08:20'),('started','player2','draw','2022-01-14 15:09:32'),('started','player1','draw','2022-01-14 15:09:37'),('started','player2','draw','2022-01-14 15:09:52'),('started','player1','draw','2022-01-14 15:12:47'),('started','player1','draw','2022-01-14 15:13:04'),('started','player2','draw','2022-01-14 15:13:08'),('started','player1','draw','2022-01-14 15:13:20'),('started','player2','draw','2022-01-14 15:13:22'),('started','player1','draw','2022-01-14 15:13:23'),('started','player2','draw','2022-01-14 15:13:24'),('started','player1','draw','2022-01-14 15:22:13'),('started','player2','draw','2022-01-14 15:26:00'),('started','player1','draw','2022-01-14 15:26:05'),('started','player2','draw','2022-01-14 15:26:27'),('started','player1','draw','2022-01-14 15:26:31'),('started','player2','draw','2022-01-14 15:27:36'),('started','player1','draw','2022-01-14 15:27:40'),('started','player2','draw','2022-01-14 15:27:50'),('started','player1','draw','2022-01-14 15:28:09'),('started','player2','draw','2022-01-14 15:30:31'),('started','player2','draw','2022-01-14 15:31:18'),('started','player1','draw','2022-01-14 15:31:21'),('started','player1','draw','2022-01-14 18:18:09'),('aborted','player2','draw','2022-01-14 18:18:12'),('started','player2','draw','2022-01-14 18:23:34'),('aborted','player1','draw','2022-01-14 19:00:28'),('aborted','player1','draw','2022-01-14 19:07:25'),('aborted','player2','draw','2022-01-14 19:14:34'),('aborted','player1','draw','2022-01-14 19:15:38'),('aborted','player2','draw','2022-01-14 19:18:08'),('aborted','player2','draw','2022-01-14 19:24:19'),('aborted','player1','draw','2022-01-14 19:26:36'),('aborted','player1','draw','2022-01-14 19:34:44'),('aborted','player1','draw','2022-01-14 19:37:45'),('aborted','player1','draw','2022-01-14 19:42:55'),('aborted','player2','draw','2022-01-14 19:49:59'),('aborted','player1','draw','2022-01-14 19:54:43'),('aborted','player1','draw','2022-01-14 20:03:05'),('aborted','player1','draw','2022-01-14 20:07:39'),('aborted','player1','draw','2022-01-14 20:13:33'),('aborted','player2','draw','2022-01-14 20:28:33'),('aborted','player1','draw','2022-01-14 20:30:47'),('aborted','player2','draw','2022-01-14 20:31:26'),('aborted','player1','draw','2022-01-14 20:32:21'),('aborted','player1','draw','2022-01-14 20:36:07');
 /*!40000 ALTER TABLE `game_status` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -117,6 +117,33 @@ INSERT INTO `users` VALUES (1,'voula','abc',1),(2,'ganosi','abc',1);
 UNLOCK TABLES;
 
 --
+-- Dumping events for database 'adise'
+--
+/*!50106 SET @save_time_zone= @@TIME_ZONE */ ;
+/*!50106 DROP EVENT IF EXISTS `callStoredProcedure` */;
+DELIMITER ;;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;;
+/*!50003 SET character_set_client  = utf8mb4 */ ;;
+/*!50003 SET character_set_results = utf8mb4 */ ;;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;;
+/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;;
+/*!50003 SET @saved_time_zone      = @@time_zone */ ;;
+/*!50003 SET time_zone             = 'SYSTEM' */ ;;
+/*!50106 CREATE*/ /*!50117 DEFINER=`root`@`localhost`*/ /*!50106 EVENT `callStoredProcedure` ON SCHEDULE EVERY 1 MINUTE STARTS '2022-01-14 22:36:02' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
+        CALL FindIfGameAborted();
+      END */ ;;
+/*!50003 SET time_zone             = @saved_time_zone */ ;;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;;
+/*!50003 SET character_set_results = @saved_cs_results */ ;;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;;
+DELIMITER ;
+/*!50106 SET TIME_ZONE= @save_time_zone */ ;
+
+--
 -- Dumping routines for database 'adise'
 --
 /*!50003 DROP PROCEDURE IF EXISTS `FindIfGameAborted` */;
@@ -131,13 +158,52 @@ UNLOCK TABLES;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `FindIfGameAborted`()
 BEGIN
-	update game_status set status = 'aborted'
-where exists (
-SELECT ROUND((UNIX_TIMESTAMP() - UNIX_TIMESTAMP(last_change)) / 60) < 1
-from (select * from game_status ) as gs
-order by last_change desc limit 1
-) and last_change = ( select last_change from (select * from game_status) as tbl order by last_change desc limit 1 )
-;
+    DECLARE endTime timestamp DEFAULT now();
+    
+    REPEAT
+        SET SQL_SAFE_UPDATES = 0;
+      update game_status set status = 'aborted'
+		where exists (
+		SELECT ROUND((UNIX_TIMESTAMP() - UNIX_TIMESTAMP(last_change)) / 60) > 1
+		from (select * from game_status ) as gs
+		order by last_change desc limit 1
+		) and last_change = ( select last_change from (select * from game_status) as tbl order by last_change desc limit 1 )
+		;
+    UNTIL endTime < now() + INTERVAL 1 MONTH
+    END REPEAT;
+    
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `RepeatDemo` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `RepeatDemo`()
+BEGIN
+    DECLARE endTime timestamp DEFAULT now();
+    
+    REPEAT
+        SET SQL_SAFE_UPDATES = 0;
+      update game_status set status = 'aborted'
+		where exists (
+		SELECT ROUND((UNIX_TIMESTAMP() - UNIX_TIMESTAMP(last_change)) / 60) > 1
+		from (select * from game_status ) as gs
+		order by last_change desc limit 1
+		) and last_change = ( select last_change from (select * from game_status) as tbl order by last_change desc limit 1 )
+		;
+    UNTIL endTime < now() + INTERVAL 1 MONTH
+    END REPEAT;
+    
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -154,4 +220,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-14 17:52:57
+-- Dump completed on 2022-01-14 22:43:59
