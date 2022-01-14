@@ -68,6 +68,11 @@
 
     function swap_card($method, $card_id)
     {
+        if(!is_logged_in())
+        { 
+            print "\nPlease log in in order to play";
+            return false;
+        }
         if($method=='GET') return false;
 
         arrange_cards();
