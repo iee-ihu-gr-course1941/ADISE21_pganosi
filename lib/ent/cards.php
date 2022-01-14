@@ -133,6 +133,7 @@
 
         // $sql = 'DELETE FROM current_cards';
         // execute_query($sql);
+        global $mysqli;
         $mysqli->query('DELETE FROM current_cards');
         
         $sql = 'INSERT INTO current_cards SELECT * FROM CARDS';
