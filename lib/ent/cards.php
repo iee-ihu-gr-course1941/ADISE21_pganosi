@@ -122,20 +122,9 @@
         $sql = 'SET SQL_SAFE_UPDATES = 0';
         execute_query($sql);
 
-        // //updated
-        // $sql = "use adise";
-        // global $mysqli;
-
-        // $stmt = $mysqli->prepare($sql);
-
-        // $stmt->execute();
-        // //updated
-
         $sql = 'DELETE FROM current_cards';
-        // execute_query($sql);
-        global $mysqli;
-        $result = mysqli_query($mysqli, $sql);
-        
+        execute_query($sql);
+
         $sql = 'INSERT INTO current_cards SELECT * FROM CARDS';
         execute_query($sql);
 
@@ -174,7 +163,6 @@
         $stmt->execute();
         $result = $stmt->get_result();
 
-        $mysqli->close();
     }
 
     function arrange_cards()
