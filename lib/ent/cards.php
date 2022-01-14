@@ -5,10 +5,9 @@
     function hande_cards($method)
     {
         header("Content-Type: text/plain");
-        // print $method;
-        
+       
         if($method=='GET') fetch_cards();
-        else if($method=='POST') init_game();//duplicates();//init_game();
+        else if($method=='POST') init_game();
     }
 
     function fetch_cards()
@@ -87,7 +86,7 @@
         execute_query($sql);
         print("\nCard swapped\n");
 
-        duplicates();
+        hadle_duplicates();
         print("\nDupplicates dropped\n");
 
         if(!check_for_winner()) print("\nNo winner, game continuing...\n");
@@ -129,7 +128,7 @@
 
         print "\nNew game initialized\n";
         
-        duplicates();
+        hadle_duplicates();
         
         init_game_status();
 
@@ -179,7 +178,7 @@
         execute_query($sql);
     }
 
-    function duplicates()
+    function hadle_duplicates()
     {
         global $mysqli;
         $cards = array();
@@ -226,5 +225,23 @@
                 $result->free();
             }
         } while ($mysqli->next_result());
+    }
+
+    function show_my_cards()
+    {
+        $player = show_next_player();
+        global $mysqli;
+        $sql = "select name, cardgroup, holder from current_cards
+        where holder='$player'";
+
+        $stmt = $mysqli->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        header('Content-type: application/json');
+        $json = json_encode($result->fetch_all(MYSQLI_ASSOC),
+            JSON_PRETTY_PRINT);
+        
+        print $json;
     }
 ?>
