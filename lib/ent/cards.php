@@ -172,6 +172,7 @@
         $stmt->execute();
         $result = $stmt->get_result();
 
+        $mysqli->close();
     }
 
     function arrange_cards()
