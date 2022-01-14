@@ -131,10 +131,10 @@
         // $stmt->execute();
         // //updated
 
-        // $sql = 'DELETE FROM current_cards';
+        $sql = 'DELETE FROM current_cards';
         // execute_query($sql);
         global $mysqli;
-        $mysqli->query('DELETE FROM current_cards');
+        $result = mysqli_query($mysqli, $sql);
         
         $sql = 'INSERT INTO current_cards SELECT * FROM CARDS';
         execute_query($sql);
