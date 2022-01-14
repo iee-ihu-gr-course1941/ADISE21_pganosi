@@ -125,7 +125,7 @@
         $sql = 'DELETE FROM current_cards';
         execute_query($sql);
 
-        $sql = 'INSERT INTO current_cards SELECT * FROM CARDS';
+        $sql = 'INSERT INTO adise.current_cards SELECT * FROM adise.cards';
         execute_query($sql);
 
         distribute_cards();
