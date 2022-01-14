@@ -122,14 +122,14 @@
         $sql = 'SET SQL_SAFE_UPDATES = 0';
         execute_query($sql);
 
-        // //updated
-        // $sql = "use adise";
-        // global $mysqli;
+        //updated
+        $sql = "use adise";
+        global $mysqli;
 
-        // $stmt = $mysqli->prepare($sql);
+        $stmt = $mysqli->prepare($sql);
 
-        // $stmt->execute();
-        // //updated
+        $stmt->execute();
+        //updated
 
         $sql = 'DELETE FROM current_cards';
         execute_query($sql);
