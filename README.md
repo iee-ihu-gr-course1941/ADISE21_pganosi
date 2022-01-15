@@ -2,7 +2,7 @@
 ## Moutzouris Card Game
 
 
-![image info](https://w7.pngwing.com/pngs/800/271/png-transparent-king-of-clubs-computer-icons-hearts-playing-card-king-of-diamonds-card-angle-king-text.png)
+![image info](https://w7.pngwing.com/pngs/800/271/png-transparent-king-of-clubs-computer-icons-hearts-playing-card-king-of-diamonds-card-angle-king-text-thumbnail.png)
 
 ## Creator : Paraskevi Ganosi
 
