@@ -71,11 +71,11 @@ Table game_status:
 
 | Action | Endpoint |
 | ------ | ------ |
-| Show Game Status | [curl -X GET https://users.iee.ihu.gr/~it134089/ADISE21_pganosi/www/game.php/status][PlDb] |
-| Show all cards in Game | [curl -X GET https://users.iee.ihu.gr/~it134089/ADISE21_pganosi/www/game.php/cards][PlGh] |
-| Start New Game | [curl -X POST  https://users.iee.ihu.gr/~it134089/ADISE21_pganosi/www/game.php/status][PlGd] |
-| Swap Card | [curl -X POST  https://users.iee.ihu.gr/~it134089/ADISE21_pganosi/www/game.php/swap_card/{number}][PlOd] |
-| Login | [curl -X POST https://users.iee.ihu.gr/~it134089/ADISE21_pganosi/www/game.php/users/{username}][PlMe] |
-| Logout | [curl -X GET https://users.iee.ihu.gr/~it134089/ADISE21_pganosi/www/game.php/users/{username}][PlGa] |
-| Show Active Player's Cards | [curl -X GET https://users.iee.ihu.gr/~it134089/ADISE21_pganosi/www/game.php/my_cards][PlGa] |
+| Show Game Status | [curl -X GET https://users.iee.ihu.gr/~it134089/ADISE21_pganosi/www/game.php/status] |
+| Show all cards in Game | [curl -X GET https://users.iee.ihu.gr/~it134089/ADISE21_pganosi/www/game.php/cards] |
+| Start New Game | [curl -X POST  https://users.iee.ihu.gr/~it134089/ADISE21_pganosi/www/game.php/status] |
+| Swap Card | [curl -X POST  https://users.iee.ihu.gr/~it134089/ADISE21_pganosi/www/game.php/swap_card/{number}] |
+| Login | [curl -X POST https://users.iee.ihu.gr/~it134089/ADISE21_pganosi/www/game.php/users/{username}] |
+| Logout | [curl -X GET https://users.iee.ihu.gr/~it134089/ADISE21_pganosi/www/game.php/users/{username}] |
+| Show Active Player's Cards | [curl -X GET https://users.iee.ihu.gr/~it134089/ADISE21_pganosi/www/game.php/my_cards] |
 
